@@ -1,0 +1,14 @@
+.center {
+    text-align: center;
+}
+
+.content {
+    border: 1rem solid black;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+}
+
+.container {
+    display: flex;
+}
