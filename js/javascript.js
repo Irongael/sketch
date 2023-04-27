@@ -48,6 +48,7 @@ function eraseDiv() {
     gridDivs.forEach((grid) => {
         grid.addEventListener('mousemove', () => {
             grid.classList.remove('black');
+            grid.style.backgroundColor = null;
         });
     });
 }
@@ -57,6 +58,22 @@ function drawDiv() {
     gridDivs.forEach((grid) => {
         grid.addEventListener('mousemove', () => {
             grid.classList.add('black');
+        });
+    });
+}
+
+function ranNum() {
+    return Math.random() * (255 - 0) + 0;
+}
+
+function colorDiv() {
+    const gridDivs = document.querySelectorAll('.content');
+    gridDivs.forEach((grid) => {
+        let num1 = ranNum();
+        let num2 = ranNum();
+        let num3 = ranNum();
+        grid.addEventListener('mousemove', () => {
+            grid.style.backgroundColor =`rgb(${num1}, ${num2}, ${num3})`;
         });
     });
 }
@@ -75,4 +92,9 @@ eraseBtn.addEventListener('click', () => {
 const drawBtn = document.querySelector('#drawBtn');
 drawBtn.addEventListener('click', () => {
     drawDiv();
+});
+
+const colorBtn = document.querySelector('#colorBtn');
+colorBtn.addEventListener('click', () => {
+    colorDiv();
 });
