@@ -52,6 +52,15 @@ function eraseDiv() {
     });
 }
 
+function drawDiv() {
+    const gridDivs = document.querySelectorAll('.content');
+    gridDivs.forEach((grid) => {
+        grid.addEventListener('mousemove', () => {
+            grid.classList.add('black');
+        });
+    });
+}
+
 const gridBtn = document.querySelector('#btn');
 gridBtn.addEventListener('click', () => {
     clearGrid();
@@ -61,4 +70,9 @@ gridBtn.addEventListener('click', () => {
 const eraseBtn = document.querySelector('#eraseBtn');
 eraseBtn.addEventListener('click', () => {
     eraseDiv();
+});
+
+const drawBtn = document.querySelector('#drawBtn');
+drawBtn.addEventListener('click', () => {
+    drawDiv();
 });
