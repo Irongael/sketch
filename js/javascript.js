@@ -58,6 +58,7 @@ function drawDiv() {
     gridDivs.forEach((grid) => {
         grid.addEventListener('mousemove', () => {
             grid.classList.add('black');
+            grid.style.backgroundColor = null;
         });
     });
 }
