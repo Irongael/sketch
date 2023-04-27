@@ -85,6 +85,14 @@ function colorDiv() {
     });
 }
 
+function clearDiv() {
+    const gridDivs = document.querySelectorAll('.content');
+    gridDivs.forEach((grid) => {
+        grid.style.backgroundColor = null;
+        grid.classList.remove('black');
+    });
+}
+
 createGrid();
 
 const gridBtn = document.querySelector('#btn');
@@ -106,4 +114,9 @@ drawBtn.addEventListener('click', () => {
 const colorBtn = document.querySelector('#colorBtn');
 colorBtn.addEventListener('click', () => {
     colorDiv();
+});
+
+const clearBtn = document.querySelector('#clearBtn');
+clearBtn.addEventListener('click', () => {
+    clearDiv();
 });
