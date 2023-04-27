@@ -14,6 +14,13 @@ function createGrid() {
 
             container.appendChild(content);
         }
+
+        const gridDivs = document.querySelectorAll('.content');
+        gridDivs.forEach((grid) => {
+            grid.addEventListener('mousemove', () => {
+                grid.classList.add('black');
+            });
+        });
     }
     else {
         console.log("ERROR");
@@ -41,4 +48,7 @@ gridBtn.addEventListener('click', () => {
     clearGrid();
     createGrid();
 });
+
+
+
 

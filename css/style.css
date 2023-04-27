@@ -13,3 +13,9 @@
     width: 640px;
     margin: auto;
 }
+
+.black {
+    border: 1px solid black;
+    background-color: black;
+}
+
