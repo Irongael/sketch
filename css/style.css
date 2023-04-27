@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+.mainDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .content {
     border: 1px solid black;
     background-color: white;
@@ -11,7 +16,6 @@
     display: grid;
     height: 640px;
     width: 640px;
-    margin: auto;
 }
 
 .black {
@@ -19,3 +23,13 @@
     background-color: black;
 }
 
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btn {
+    height: 50px;
+    width: 100px;
+}
