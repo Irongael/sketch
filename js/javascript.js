@@ -43,12 +43,22 @@ function clearGrid() {
     
 }
 
+function eraseDiv() {
+    const gridDivs = document.querySelectorAll('.content');
+    gridDivs.forEach((grid) => {
+        grid.addEventListener('mousemove', () => {
+            grid.classList.remove('black');
+        });
+    });
+}
+
 const gridBtn = document.querySelector('#btn');
 gridBtn.addEventListener('click', () => {
     clearGrid();
     createGrid();
 });
 
-
-
-
+const eraseBtn = document.querySelector('#eraseBtn');
+eraseBtn.addEventListener('click', () => {
+    eraseDiv();
+});
